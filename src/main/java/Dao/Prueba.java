@@ -16,10 +16,10 @@ public class Prueba {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    ConexionBorea conexion=new ConexionBorea();
-     
+    ConexionRandal conexion=new ConexionRandal();
     conexion.abrirConexion();
     conexion.cerrarConexion();
+        System.out.println("hola a todos");
     }
     
     
