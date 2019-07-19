@@ -9,7 +9,7 @@ public class ConexionBorea {
     //atributos
     private Connection miConexion;
     private static final String URL = "jdbc:mysql://10.12.48.157:3306/java19_borea";
-    private static final String PASSWORD = "123546";
+    private static final String PASSWORD = "123456";
     private static final String USER = "adminborea";
 
     public Connection getMiConexion() {
@@ -22,7 +22,7 @@ public class ConexionBorea {
 
     public void abrirConexion() {
         try {
-            String mensaje="Si conecto";
+            
             Class.forName("com.mysql.jdbc.Driver");
             miConexion = DriverManager.getConnection(URL, USER, PASSWORD);
         } catch (ClassNotFoundException | SQLException ex) {
