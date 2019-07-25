@@ -89,7 +89,32 @@ public class ImgServiceDao implements ImageServiceInterface {
 
     @Override
     public String deleteService(ImagenesServicio img) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        try {
+            conex.abrirConexion();
+            
+            mysql="delete from imagenes_servicios where imagenservicio=?";
+            
+            ejecutar = conex.getMiConexion().prepareStatement(mysql);
+            
+            ejecutar.setInt(1, img.getImagenservicio_id());
+            
+            registrosAfectados = ejecutar.executeUpdate();
+            
+            if(registrosAfectados == 0){
+                mensaje="NO SE ENCONTRO EL REGISTRO";
+            }
+            else{
+                mensaje="REGISTRO ELIMINADO";
+            }
+        } 
+        catch (Exception e) {
+            mensaje="REGISTRO ELIMINADO "+e;
+        }
+        finally{
+            conex.cerrarConexion();
+        }
+        return mensaje;
     }
 
     @Override
