@@ -14,10 +14,18 @@ import java.util.ArrayList;
  * @author Admin
  */
 public class CategoriasDao implements CategoriasInterface {
+    
+    private String mensaje;
 
     @Override
     public String guardarCategoria(Categorias cate) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        try {
+            
+        }
+        catch (Exception e) {
+        }
+        return mensaje;
     }
 
     @Override
