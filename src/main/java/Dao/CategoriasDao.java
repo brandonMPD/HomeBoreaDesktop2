@@ -17,6 +17,8 @@ import java.util.ArrayList;
  * @author Admin
  */
 public class CategoriasDao implements CategoriasInterface {
+    
+    private String mensaje;
 
     ConexionBorea conex = new ConexionBorea();
     private PreparedStatement ejecutar;
@@ -28,28 +30,11 @@ public class CategoriasDao implements CategoriasInterface {
 
     @Override
     public String guardarCategoria(Categorias cate) {
-
+        
         try {
-            conex.abrirConexion();
-            sql = "insert into categorias values(?,?,?)";
-            ejecutar = conex.getMiConexion().prepareStatement(sql);
-
-            ejecutar.setByte(1, cate.getCategoria_id());
-            ejecutar.setString(2, cate.getNombre());
-            ejecutar.setInt(3, cate.getEmpleado_id());
-
-            contarRegistros = ejecutar.executeUpdate();
-
-            if (contarRegistros == 0) {
-                mensaje = "NO SE ENCONTRO LA BASE DE DATOS";
-            } else {
-                mensaje = "REGISTRO GUARDADO";
-            }
-
-        } catch (Exception e) {
-            mensaje = "ERROR EN INSERTAR_CATEGORIA " + e;
-        } finally {
-            conex.cerrarConexion();
+            
+        }
+        catch (Exception e) {
         }
         return mensaje;
     }
