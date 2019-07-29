@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    </h:head>
+    <h:body>
+
+        <p:growl id="msj" autoUpdate="true" />
+
+        <h:form id="frm">
+            
+            
+            <p:commandLink oncomplete="PF('wdlgDatos').show();" actionListener="#{empleadosControlador.setAccion('Registrar')}" update=":dlgDatos">
+                <img src="https://img.icons8.com/dusk/60/000000/add-database.png"></img>
+            </p:commandLink>  
+            <p:commandLink actionListener="#{empleadosControlador.listar()}"  update="dtable" >
+                <img src="https://img.icons8.com/dusk/60/000000/database.png"></img>
+            </p:commandLink>
+            
+
+            <!--<button class="btn btn-primary" type="submit">Button</button>-->
+
+            <p:dataTable id="dtable" value="#{empleadosControlador.lstEmpleado}" var="Empleados"  >
+
+                <p:column headerText="Codigo" >
+                    <p:outputLabel  value="#{Empleados.emp_codigo}" />
+                </p:column>
+                <p:column headerText="Nombre" >
+                    <p:outputLabel value="#{Empleados.nombre}" />
+                </p:column>
+                <p:column headerText="Apellido" >
+                    <p:outputLabel value="#{Empleados.apellido}" />
+                </p:column>
+                <p:column headerText="Telefono" >
+                    <p:outputLabel value="#{Empleados.telmovil}" />
+                </p:column>
+                <p:column headerText="Contraseña" >
+                    <p:outputLabel value="#{Empleados.contrasenia}" />
+                </p:column>
+                <p:column headerText="Dirección" >
+                    <p:outputLabel value="#{Empleados.direccion}" />
+                </p:column>
+                <p:column headerText="Correo" >
+                    <p:outputLabel value="#{Empleados.correo}" />
+                </p:column>
+
+                <p:column headerText="Modificar" >
+                    <p:commandLink actionListener="#{empleadosControlador.leerID(Empleados)}" oncomplete="PF('wdlgDatos').show();" update=":dlgDatos">
+                        <img src="https://img.icons8.com/dusk/50/000000/data-configuration.png"></img>
+                    </p:commandLink>
+                </p:column>
+                <p:column headerText="Eliminar" >
+                    <p:commandLink actionListener="#{empleadosControlador.eliminar(Empleados)}" update="dtable" >
+                        <img src="https://img.icons8.com/plasticine/60/000000/remove-data.png"></img>
+                    </p:commandLink>
+                </p:column>
+
+            </p:dataTable>
+
+        </h:form>
+        <p:dialog header="datos" widgetVar="wdlgDatos" id="dlgDatos">
+            <h:form>
+                <p:outputLabel value="Codigo" />
+                <p:inputText value="#{empleadosControlador.emp.emp_codigo}" />
+
+                <p:outputLabel value="Nombre" />
+                <p:inputText value="#{empleadosControlador.emp.nombre}"/>
+
+                <p:outputLabel value="Apellido" />
+                <p:inputText value="#{empleadosControlador.emp.apellido}"/>
+
+                <p:outputLabel value="Telefono" />
+                <p:inputText value="#{empleadosControlador.emp.telmovil}"/>
+
+                <p:outputLabel value="Contraseña" />
+                <p:inputText value="#{empleadosControlador.emp.contrasenia}"/>
+
+                <p:outputLabel value="Direccion" />
+                <p:inputText value="#{empleadosControlador.emp.direccion}"/>
+
+                <p:outputLabel value="Correo" />
+                <p:inputText value="#{empleadosControlador.emp.correo}"/>
+
+                <p:commandButton value="#{empleadosControlador.accion}" actionListener="#{empleadosControlador.operar()}" oncomplete="PF('wdlgDatos').hide();" update=":frm:dtable" />
+                <p:commandButton value="Cancelar" immediate="true" oncomplete="PF('wdlgDatos').hide();" />
+            </h:form>
+
+        </p:dialog>
+    </h:body>
+</html>
+

@@ -5,6 +5,7 @@
  */
 package Dao;
 
+import Modelo.Asociados;
 import Modelo.Categorias;
 import interfaces.CategoriasInterface;
 import java.sql.PreparedStatement;
@@ -23,18 +24,28 @@ public class CategoriasDao implements CategoriasInterface {
     ConexionBorea conex = new ConexionBorea();
     private PreparedStatement ejecutar;
     private ResultSet resultadoSelect;
-
-    private String mensaje;
     private String sql;
     private int contarRegistros = 0;
 
     @Override
     public String guardarCategoria(Categorias cate) {
-        
         try {
-            
-        }
-        catch (Exception e) {
+            conex.abrirConexion();
+            sql = "select * from  categorias where categoria_id=?";
+            ejecutar = conex.getMiConexion().prepareStatement(sql);
+            ejecutar.setInt(1, cate.getCategoria_id());
+            resultadoSelect = ejecutar.executeQuery();
+            if (resultadoSelect.next()) {
+                cate = new Categorias();
+                cate.setNombre(resultadoSelect.getString("nombre"));
+                cate.setEmpleado_id(resultadoSelect.getInt("empleado_id"));
+                cate.setCategoria_id(resultadoSelect.getByte("categoria_id"));
+            }
+            mensaje = "Los datos se guardaron";
+        } catch (Exception e) {
+            mensaje = "Error al guardar los datos"+e;
+        } finally {
+            conex.cerrarConexion();
         }
         return mensaje;
     }
