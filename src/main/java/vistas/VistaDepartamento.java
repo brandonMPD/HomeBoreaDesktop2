@@ -24,7 +24,7 @@ public class VistaDepartamento extends javax.swing.JFrame {
         String ruta = new File ("").getAbsolutePath () + "\\src\\main\\java\\imagenes\\mapa.gif";
         jLblImagen.setIcon(new ImageIcon(ruta));
         jLblImagen.setForeground(new java.awt.Color(255, 255, 255));
-        jLblImagen.setSize(800, 800);
+        setSize(800, 600);
         jLblImagen.setLayout(null);
         jLblImagen.repaint();
         jLblImagen.revalidate();
