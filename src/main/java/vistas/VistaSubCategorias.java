@@ -21,8 +21,8 @@ public class VistaSubCategorias extends javax.swing.JFrame {
     public VistaSubCategorias() {
         initComponents();
         String ruta = new File ("").getAbsolutePath () + "\\src\\main\\java\\imagenes\\subcate.png";
-        jLblImagenes.setIcon(new ImageIcon(ruta));
-        setSize(780, 650);
+        jLblmagenes.setIcon(new ImageIcon(ruta));
+        //setSize(780, 650);
         //JOptionPane.showMessageDialog(null, System.getProperty("user.dir"));
         this.getContentPane().setBackground(Color.LIGHT_GRAY);
         setLocationRelativeTo(null);
@@ -38,41 +38,68 @@ public class VistaSubCategorias extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jLblTitulo = new javax.swing.JLabel();
+        jLblSubId = new javax.swing.JLabel();
+        jLblNombre = new javax.swing.JLabel();
+        jTxtSubcategoria = new javax.swing.JTextField();
+        jTxtNombreSub = new javax.swing.JTextField();
+        jLblCategoria = new javax.swing.JLabel();
+        jLblEmpleado = new javax.swing.JLabel();
+        jTxtCategoria = new javax.swing.JTextField();
+        jTxtEmpleado = new javax.swing.JTextField();
+        jBtnBuscarSub = new javax.swing.JButton();
+        jBtnModificarSub = new javax.swing.JButton();
+        jBtnGuardarSub = new javax.swing.JButton();
+        jBtnEliminarSub = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTblListaSubcategorias = new javax.swing.JTable();
-        jBtnBuscar = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jLblImagenes = new javax.swing.JLabel();
-        jBtnGuardar = new javax.swing.JButton();
-        jBtnModificar = new javax.swing.JButton();
-        jBtnEliminar = new javax.swing.JButton();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        jTblListarSubcate = new javax.swing.JTable();
+        jLblSubtitulo = new javax.swing.JLabel();
+        jLblmagenes = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("SUBCATEGORIAS");
+        jLblTitulo.setFont(new java.awt.Font("Times New Roman", 3, 36)); // NOI18N
+        jLblTitulo.setForeground(new java.awt.Color(0, 255, 204));
+        jLblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLblTitulo.setText("SUBCATEGORIAS");
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("SUBCATEGORIA_ID : ");
+        jLblSubId.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        jLblSubId.setForeground(new java.awt.Color(255, 0, 0));
+        jLblSubId.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLblSubId.setText("SUBCATEGORIA_ID");
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("SUBCATEGORIA_NOMBRE");
+        jLblNombre.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        jLblNombre.setForeground(new java.awt.Color(255, 0, 0));
+        jLblNombre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLblNombre.setText("SUBCATEGORIA_NOMBRE");
 
-        jTblListaSubcategorias.setModel(new javax.swing.table.DefaultTableModel(
+        jLblCategoria.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        jLblCategoria.setForeground(new java.awt.Color(255, 0, 0));
+        jLblCategoria.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLblCategoria.setText("CATEGORIA_ID");
+
+        jLblEmpleado.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        jLblEmpleado.setForeground(new java.awt.Color(255, 0, 0));
+        jLblEmpleado.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLblEmpleado.setText("EMPLEADO_ID");
+
+        jBtnBuscarSub.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
+        jBtnBuscarSub.setForeground(new java.awt.Color(255, 0, 255));
+        jBtnBuscarSub.setText("BUSCAR");
+
+        jBtnModificarSub.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
+        jBtnModificarSub.setForeground(new java.awt.Color(255, 0, 255));
+        jBtnModificarSub.setText("MODIFICAR");
+
+        jBtnGuardarSub.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
+        jBtnGuardarSub.setForeground(new java.awt.Color(255, 0, 255));
+        jBtnGuardarSub.setText("GUARDAR");
+
+        jBtnEliminarSub.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
+        jBtnEliminarSub.setForeground(new java.awt.Color(255, 0, 255));
+        jBtnEliminarSub.setText("ELIMINAR");
+
+        jTblListarSubcate.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -83,26 +110,16 @@ public class VistaSubCategorias extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTblListaSubcategorias);
+        jScrollPane1.setViewportView(jTblListarSubcate);
 
-        jBtnBuscar.setText("BUSCAR");
+        jLblSubtitulo.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        jLblSubtitulo.setForeground(new java.awt.Color(255, 255, 0));
+        jLblSubtitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLblSubtitulo.setText("LISTAR SUBCATEGORIAS");
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 255, 255));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("LISTAR SUB_CATEGORIAS");
-
-        jBtnGuardar.setText("GUARDAR");
-
-        jBtnModificar.setText("MODIFICAR");
-
-        jBtnEliminar.setText("ELIMINAR");
-
-        jTextField3.setText("jTextField3");
-
-        jTextField4.setText("jTextField4");
-
-        jLabel4.setText("jLabel4");
+        jLblmagenes.setFont(new java.awt.Font("Times New Roman", 3, 36)); // NOI18N
+        jLblmagenes.setForeground(new java.awt.Color(255, 0, 0));
+        jLblmagenes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -112,68 +129,81 @@ public class VistaSubCategorias extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jBtnBuscar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 623, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(43, 43, 43)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jBtnGuardar)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jLblNombre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLblSubId, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLblCategoria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLblEmpleado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(37, 37, 37)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jBtnGuardarSub)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jBtnModificarSub))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jTxtEmpleado)
+                                        .addComponent(jTxtCategoria, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                                        .addComponent(jTxtSubcategoria))
+                                    .addComponent(jTxtNombreSub, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 403, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(jBtnModificar))
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(22, 22, 22)
-                        .addComponent(jBtnEliminar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44)
-                        .addComponent(jLblImagenes, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 728, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(26, Short.MAX_VALUE))
+                                .addComponent(jBtnEliminarSub))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(4, 4, 4)
+                                .addComponent(jLblmagenes, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jBtnBuscarSub)
+                            .addGap(18, 18, 18)
+                            .addComponent(jLblSubtitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 659, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGap(35, 35, 35)
+                        .addComponent(jLblTitulo)
+                        .addGap(50, 50, 50)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTxtSubcategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(82, 82, 82)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLblImagenes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(4, 4, 4)
+                                .addComponent(jLblSubId, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel4))
-                .addGap(18, 18, 18)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                            .addComponent(jLblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTxtNombreSub, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(25, 25, 25)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLblCategoria)
+                            .addComponent(jTxtCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(23, 23, 23)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLblEmpleado)
+                            .addComponent(jTxtEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(28, 28, 28))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLblmagenes, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBtnGuardar)
-                    .addComponent(jBtnModificar)
-                    .addComponent(jBtnEliminar))
-                .addGap(18, 18, 18)
+                    .addComponent(jBtnModificarSub)
+                    .addComponent(jBtnGuardarSub)
+                    .addComponent(jBtnEliminarSub))
+                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBtnBuscar)
-                    .addComponent(jLabel6))
+                    .addComponent(jBtnBuscarSub)
+                    .addComponent(jLblSubtitulo))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pack();
@@ -215,21 +245,22 @@ public class VistaSubCategorias extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBtnBuscar;
-    private javax.swing.JButton jBtnEliminar;
-    private javax.swing.JButton jBtnGuardar;
-    private javax.swing.JButton jBtnModificar;
-    public javax.swing.JLabel jLabel1;
-    public javax.swing.JLabel jLabel2;
-    public javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLblImagenes;
+    public javax.swing.JButton jBtnBuscarSub;
+    public javax.swing.JButton jBtnEliminarSub;
+    public javax.swing.JButton jBtnGuardarSub;
+    public javax.swing.JButton jBtnModificarSub;
+    private javax.swing.JLabel jLblCategoria;
+    private javax.swing.JLabel jLblEmpleado;
+    private javax.swing.JLabel jLblNombre;
+    private javax.swing.JLabel jLblSubId;
+    private javax.swing.JLabel jLblSubtitulo;
+    public javax.swing.JLabel jLblTitulo;
+    public javax.swing.JLabel jLblmagenes;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTblListaSubcategorias;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    public javax.swing.JTable jTblListarSubcate;
+    public javax.swing.JTextField jTxtCategoria;
+    public javax.swing.JTextField jTxtEmpleado;
+    public javax.swing.JTextField jTxtNombreSub;
+    public javax.swing.JTextField jTxtSubcategoria;
     // End of variables declaration//GEN-END:variables
 }
