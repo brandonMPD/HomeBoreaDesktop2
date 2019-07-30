@@ -5,6 +5,7 @@
  */
 package Dao;
 
+import Modelo.Asociados;
 import Modelo.Categorias;
 import interfaces.CategoriasInterface;
 import java.sql.PreparedStatement;
@@ -17,37 +18,32 @@ import java.util.ArrayList;
  * @author Admin
  */
 public class CategoriasDao implements CategoriasInterface {
+    
+    private String mensaje;
 
     ConexionBorea conex = new ConexionBorea();
     private PreparedStatement ejecutar;
     private ResultSet resultadoSelect;
-
-    private String mensaje;
     private String sql;
     private int contarRegistros = 0;
 
     @Override
     public String guardarCategoria(Categorias cate) {
-
         try {
             conex.abrirConexion();
-            sql = "insert into categorias values(?,?,?)";
+            sql = "select * from  categorias where categoria_id=?";
             ejecutar = conex.getMiConexion().prepareStatement(sql);
-
-            ejecutar.setByte(1, cate.getCategoria_id());
-            ejecutar.setString(2, cate.getNombre());
-            ejecutar.setInt(3, cate.getEmpleado_id());
-
-            contarRegistros = ejecutar.executeUpdate();
-
-            if (contarRegistros == 0) {
-                mensaje = "NO SE ENCONTRO LA BASE DE DATOS";
-            } else {
-                mensaje = "REGISTRO GUARDADO";
+            ejecutar.setInt(1, cate.getCategoria_id());
+            resultadoSelect = ejecutar.executeQuery();
+            if (resultadoSelect.next()) {
+                cate = new Categorias();
+                cate.setNombre(resultadoSelect.getString("nombre"));
+                cate.setEmpleado_id(resultadoSelect.getInt("empleado_id"));
+                cate.setCategoria_id(resultadoSelect.getByte("categoria_id"));
             }
-
+            mensaje = "Los datos se guardaron";
         } catch (Exception e) {
-            mensaje = "ERROR EN INSERTAR_CATEGORIA " + e;
+            mensaje = "Error al guardar los datos"+e;
         } finally {
             conex.cerrarConexion();
         }

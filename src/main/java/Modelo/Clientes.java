@@ -2,7 +2,7 @@ package Modelo;
 public class Clientes {
     private int cliente_id;
     private String usuario;
-    private String contraseña;
+    private String contrasenia;
 
     public int getCliente_id() {
         return cliente_id;
@@ -20,13 +20,15 @@ public class Clientes {
         this.usuario = usuario;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasenia() {
+        return contrasenia;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasenia(String contrasenia) {
+        this.contrasenia = contrasenia;
     }
+
+    
     
     
 }
