@@ -24,7 +24,7 @@ public class VistaSubCategorias extends javax.swing.JFrame {
         jLblmagenes.setIcon(new ImageIcon(ruta));
         //setSize(780, 650);
         //JOptionPane.showMessageDialog(null, System.getProperty("user.dir"));
-        this.getContentPane().setBackground(Color.LIGHT_GRAY);
+        this.getContentPane().setBackground(Color.orange);
         setLocationRelativeTo(null);
         setVisible(true);
     }
@@ -59,27 +59,27 @@ public class VistaSubCategorias extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLblTitulo.setFont(new java.awt.Font("Times New Roman", 3, 36)); // NOI18N
-        jLblTitulo.setForeground(new java.awt.Color(0, 255, 204));
+        jLblTitulo.setForeground(new java.awt.Color(255, 255, 255));
         jLblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLblTitulo.setText("SUBCATEGORIAS");
 
         jLblSubId.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
-        jLblSubId.setForeground(new java.awt.Color(255, 0, 0));
+        jLblSubId.setForeground(new java.awt.Color(0, 0, 255));
         jLblSubId.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLblSubId.setText("SUBCATEGORIA_ID");
 
         jLblNombre.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
-        jLblNombre.setForeground(new java.awt.Color(255, 0, 0));
+        jLblNombre.setForeground(new java.awt.Color(0, 0, 255));
         jLblNombre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLblNombre.setText("SUBCATEGORIA_NOMBRE");
 
         jLblCategoria.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
-        jLblCategoria.setForeground(new java.awt.Color(255, 0, 0));
+        jLblCategoria.setForeground(new java.awt.Color(0, 0, 255));
         jLblCategoria.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLblCategoria.setText("CATEGORIA_ID");
 
         jLblEmpleado.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
-        jLblEmpleado.setForeground(new java.awt.Color(255, 0, 0));
+        jLblEmpleado.setForeground(new java.awt.Color(0, 0, 255));
         jLblEmpleado.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLblEmpleado.setText("EMPLEADO_ID");
 
@@ -113,7 +113,7 @@ public class VistaSubCategorias extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTblListarSubcate);
 
         jLblSubtitulo.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
-        jLblSubtitulo.setForeground(new java.awt.Color(255, 255, 0));
+        jLblSubtitulo.setForeground(new java.awt.Color(255, 255, 255));
         jLblSubtitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLblSubtitulo.setText("LISTAR SUBCATEGORIAS");
 
@@ -129,39 +129,36 @@ public class VistaSubCategorias extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLblNombre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLblSubId, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLblCategoria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLblEmpleado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(37, 37, 37)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLblNombre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLblSubId, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLblCategoria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLblEmpleado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(37, 37, 37)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jBtnGuardarSub)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jBtnModificarSub))
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(jTxtEmpleado)
                                         .addComponent(jTxtCategoria, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
                                         .addComponent(jTxtSubcategoria))
-                                    .addComponent(jTxtNombreSub, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 403, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jTxtNombreSub, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
-                                .addComponent(jBtnEliminarSub))
+                                .addComponent(jLblmagenes, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addComponent(jLblmagenes, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jBtnGuardarSub)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jBtnModificarSub)
+                                .addGap(40, 40, 40)
+                                .addComponent(jBtnEliminarSub))))
+                    .addComponent(jLblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 403, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(jBtnBuscarSub)
                             .addGap(18, 18, 18)
                             .addComponent(jLblSubtitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 659, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -191,19 +188,20 @@ public class VistaSubCategorias extends javax.swing.JFrame {
                         .addGap(28, 28, 28))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLblmagenes, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBtnModificarSub)
-                    .addComponent(jBtnGuardarSub)
+                        .addComponent(jLblmagenes, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jBtnModificarSub)
+                        .addComponent(jBtnGuardarSub))
                     .addComponent(jBtnEliminarSub))
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtnBuscarSub)
                     .addComponent(jLblSubtitulo))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();
