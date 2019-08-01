@@ -13,7 +13,7 @@ import javax.swing.ImageIcon;
  *
  * @author Admin
  */
-public class VistaCategorias extends javax.swing.JFrame {
+public class VistaCategorias extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form VistaCategorias
@@ -25,7 +25,7 @@ public class VistaCategorias extends javax.swing.JFrame {
         setSize(800, 600);
         //JOptionPane.showMessageDialog(null, System.getProperty("user.dir"));
         this.getContentPane().setBackground(Color.LIGHT_GRAY);
-        setLocationRelativeTo(null);
+        //setLocationRelativeTo(null);
         setVisible(true);
     }
 
