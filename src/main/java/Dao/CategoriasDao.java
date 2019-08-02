@@ -55,7 +55,7 @@ public class CategoriasDao implements CategoriasInterface {
     }
 
     @Override
-    public String updateCategoria(Categorias cate) {
+    public String updateCategoria(Categorias cate) {//hola
 
         try {
             conex.abrirConexion();
