@@ -8,5 +8,6 @@ public interface AsociadosInterface {
     public ArrayList<Asociados> listarAsociados();
     public String eliminarAsociados(Asociados asociados);
     public String insertarAsociados(Asociados asociados);
+    public String modificarAsociados(Asociados asociados);
     
 }
