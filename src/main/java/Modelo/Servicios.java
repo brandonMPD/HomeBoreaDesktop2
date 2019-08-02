@@ -8,6 +8,17 @@ public class Servicios {
     private short costo;
     private byte tipocosto_id;
 
+    public Servicios(int servicio_id, int asociado_id, int subcategoria_id, short costo, byte tipocosto_id) {
+        this.servicio_id = servicio_id;
+        this.asociado_id = asociado_id;
+        this.subcategoria_id = subcategoria_id;
+        this.costo = costo;
+        this.tipocosto_id = tipocosto_id;
+    }
+
+    public Servicios() {
+    }
+
     public int getServicio_id() {
         return servicio_id;
     }

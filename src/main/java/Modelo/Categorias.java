@@ -4,6 +4,15 @@ public class Categorias {
     private String nombre;
     private int empleado_id;
 
+    public Categorias() {
+    }
+
+    public Categorias(byte categoria_id, String nombre, int empleado_id) {
+        this.categoria_id = categoria_id;
+        this.nombre = nombre;
+        this.empleado_id = empleado_id;
+    }
+    
     public byte getCategoria_id() {
         return categoria_id;
     }

@@ -4,6 +4,15 @@ public class Regiones {
     private String nombre;
     private String descripcion;
 
+    public Regiones() {
+    }
+    
+    public Regiones(byte region_id, String nombre, String descripcion) {
+        this.region_id = region_id;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+    }
+    
     public byte getRegion_id() {
         return region_id;
     }

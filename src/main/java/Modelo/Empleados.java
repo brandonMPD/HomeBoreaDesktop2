@@ -5,6 +5,15 @@ public class Empleados {
     private String contraseña;
     private int tipoempleado_id;
 
+    public Empleados() {
+    }
+
+    public Empleados(int empleado_id, String usuario, String contraseña, int tipoempleado_id) {
+        this.empleado_id = empleado_id;
+        this.usuario = usuario;
+        this.contraseña = contraseña;
+        this.tipoempleado_id = tipoempleado_id;
+    }
     public int getEmpleado_id() {
         return empleado_id;
     }

@@ -8,5 +8,6 @@ public interface NivelesAcademicosInterface {
     public ArrayList<NivelesAcademicos> listarNiveles();
     public String eliminarNiveles(NivelesAcademicos nivelesAcademicos);
     public String agregarNiveles(NivelesAcademicos nivelesAcademicos);
+    public String modificarNiveles(NivelesAcademicos nivelesAcademicos);
     
 }

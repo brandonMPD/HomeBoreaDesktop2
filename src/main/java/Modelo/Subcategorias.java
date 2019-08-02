@@ -5,6 +5,16 @@ public class Subcategorias {
     private byte categoria_id;
     private int empleado_id;
 
+    public Subcategorias() {
+    }
+
+    public Subcategorias(byte subcategoria_id, String nombre, byte categoria_id, int empleado_id) {
+        this.subcategoria_id = subcategoria_id;
+        this.nombre = nombre;
+        this.categoria_id = categoria_id;
+        this.empleado_id = empleado_id;
+    }
+    
     public byte getSubcategoria_id() {
         return subcategoria_id;
     }

@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import vistas.VistasNivelesAca;
 
 /**
  *
@@ -20,6 +21,38 @@ public class NivelAcaControlador implements ActionListener, MouseListener{
     
     NivelesAcademicos nivel = new NivelesAcademicos();
     NivelesAcademicosDao dao = new NivelesAcademicosDao();
+    VistasNivelesAca vista ;
+    String mensaje;
+    
+    public NivelAcaControlador(VistasNivelesAca vista){
+        this.vista = vista;
+        this.vista.jBtnBuscarNivel.addActionListener(this);
+        this.vista.jBtnGuardarNivel.addActionListener(this);
+        this.vista.jBtnEliminarNivel.addActionListener(this);
+        this.vista.jBtnModificarNivel.addActionListener(this);
+        
+        this.vista.jTblTabla.addMouseListener(this);
+    }
+    public void guardarNivel(){
+        
+        nivel.setNivel_acad_id(Byte.parseByte(this.vista.jTxtNivelId.getText()));
+        nivel.setNombre(this.vista.jTxtNombre.getText());
+        mensaje = dao.agregarNiveles(nivel);
+        
+        limpiarCampos();
+        
+    }
+    public void modificarNivel(){
+        nivel.setNivel_acad_id(Byte.parseByte(this.vista.jTxtNivelId.getText()));
+        nivel.setNombre(this.vista.jTxtNombre.getText());
+        mensaje = dao.modificarNiveles(nivel);
+        
+    }
+    //METODO PARA LIMPIAR LOS CAMPOS......
+    public void limpiarCampos(){
+        this.vista.jTxtNivelId.setText("");
+        this.vista.jTxtNombre.setText("");
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {

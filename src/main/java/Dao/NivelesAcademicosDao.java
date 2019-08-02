@@ -62,9 +62,9 @@ public class NivelesAcademicosDao implements NivelesAcademicosInterface {
     public String eliminarNiveles(NivelesAcademicos nivelesAcademicos) {
         try {
             cnb.abrirConexion();
-            sql = "delete * from niveles_academicos where nevelacademico_id=? ";
+            sql = "delete * from niveles_academicos where nivelacademico_id=? ";
             ejecutar = cnb.getMiConexion().prepareStatement(sql);
-            ejecutar.setByte(1, nva.getNivel_acad_id());
+            ejecutar.setByte(1, nivelesAcademicos.getNivel_acad_id());
             ejecutar.executeUpdate();
             mensaje = "Los datos se eliminaron";
         } catch (Exception e) {
@@ -81,12 +81,30 @@ public class NivelesAcademicosDao implements NivelesAcademicosInterface {
             cnb.abrirConexion();
             sql = "insert into niveles_academicos values(?, ? ) ";
             ejecutar = cnb.getMiConexion().prepareStatement(sql);
-            ejecutar.setByte(1, nva.getNivel_acad_id());
-            ejecutar.setString(2, nva.getNombre());
+            ejecutar.setByte(1, nivelesAcademicos.getNivel_acad_id());
+            ejecutar.setString(2, nivelesAcademicos.getNombre());
             ejecutar.executeUpdate();
             mensaje = "Los datos fueron almacenados ";
         } catch (Exception e) {
             mensaje = "Los dato no se pueden almacenar";
+        }finally{
+            cnb.cerrarConexion();
+        }
+        return mensaje;
+    }
+
+    @Override
+    public String modificarNiveles(NivelesAcademicos nivelesAcademicos) {
+       try {
+            cnb.abrirConexion();
+            sql = "update niveles_academicos set nombre=? where nivelacademico=?";
+            ejecutar = cnb.getMiConexion().prepareStatement(sql);
+            ejecutar.setByte(2, nivelesAcademicos.getNivel_acad_id());
+            ejecutar.setString(1, nivelesAcademicos.getNombre());
+            ejecutar.executeUpdate();
+            mensaje = "Los datos fueron almacenados ";
+        } catch (Exception e) {
+            mensaje = "Los dato no se PUEDE MODIFICAR "+e;
         }finally{
             cnb.cerrarConexion();
         }
