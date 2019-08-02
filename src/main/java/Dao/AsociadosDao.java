@@ -13,6 +13,7 @@ public class AsociadosDao implements AsociadosInterface {
     private String mensaje = null;
     private String sql;
     private PreparedStatement ejecutar;
+    private int ContarRegistro = 0;
     ResultSet rs;
 
     @Override
@@ -117,8 +118,38 @@ public class AsociadosDao implements AsociadosInterface {
         return mensaje;
     }
 
-    Asociados buscarAsociados(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    /**
+     * Se Agrego el metodo abstracto modificar
+     * Metodo Abstracto
+     * 
+     */
+    @Override
+    public String modificarAsociados(Asociados asociados) {
+        try {
+            cnb.abrirConexion();
+            sql = "update asociados set antecedentes_penales=?, antecedentes_policiacos=?, dpiimagen=?, especialidad=?, fotografia=?, nivelacademico_id=?, usuario=?, password=? where asociado_id=?  ";
+            ejecutar = cnb.getMiConexion().prepareStatement(sql);
+            ejecutar.setString(1, ac.getAnte_penal());
+            ejecutar.setString(2, ac.getAnte_penal());
+            ejecutar.setString(3, ac.getAnte_poli());
+            ejecutar.setString(4, ac.getDpiImagen());
+            ejecutar.setString(5, ac.getEspecialidad());
+            ejecutar.setString(6, ac.getFoto());
+            ejecutar.setByte(7, ac.getNivel_acad_id());
+            ejecutar.setString(7, ac.getUsuario_aso());
+            ejecutar.setString(8, ac.getUsuario_contra());
+            ContarRegistro = ejecutar.executeUpdate();
+            if (ContarRegistro == 0) {
+                mensaje = "Ingrese un registro valido";
+            }else{
+                mensaje = "Los datos se modificaron ";
+            }
+        } catch (Exception e) {
+        }finally{
+            cnb.cerrarConexion();
+        }
+        return mensaje;
+    
     }
 
 }
