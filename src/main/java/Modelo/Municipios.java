@@ -4,6 +4,15 @@ public class Municipios {
     private String nombre;
     private byte depa_id;
 
+    public Municipios() {
+    }
+
+    public Municipios(short municipio_id, String nombre, byte depa_id) {
+        this.municipio_id = municipio_id;
+        this.nombre = nombre;
+        this.depa_id = depa_id;
+    }
+    
     public short getMunicipio_id() {
         return municipio_id;
     }

@@ -8,9 +8,24 @@ public class Asociados {
     private String especialidad;
     private String foto;
     private byte nivel_acad_id;
-    
-    
+    private String usuario_aso;
+    private String usuario_contra;
 
+    public Asociados() {
+    }
+
+    public Asociados(int asociado_id, String ante_penal, String ante_poli, String dpiImagen, String especialidad, String foto, byte nivel_acad_id, String usuario_aso, String usuario_contra) {
+        this.asociado_id = asociado_id;
+        this.ante_penal = ante_penal;
+        this.ante_poli = ante_poli;
+        this.dpiImagen = dpiImagen;
+        this.especialidad = especialidad;
+        this.foto = foto;
+        this.nivel_acad_id = nivel_acad_id;
+        this.usuario_aso = usuario_aso;
+        this.usuario_contra = usuario_contra;
+    }
+    
     public int getAsociado_id() {
         return asociado_id;
     }
@@ -82,6 +97,5 @@ public class Asociados {
     public void setUsuario_contra(String usuario_contra) {
         this.usuario_contra = usuario_contra;
     }
-    private String usuario_aso;
-    private String usuario_contra;
+    
 }

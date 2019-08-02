@@ -4,6 +4,15 @@ public class ClasificacionesServicios {
     private String nombre;
     private String descripcion;
 
+    public ClasificacionesServicios() {
+    }
+
+    public ClasificacionesServicios(byte clasificacion_id, String nombre, String descripcion) {
+        this.clasificacion_id = clasificacion_id;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+    }
+    
     public byte getClasificacion_id() {
         return clasificacion_id;
     }

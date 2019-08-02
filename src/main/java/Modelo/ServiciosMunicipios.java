@@ -4,6 +4,15 @@ public class ServiciosMunicipios {
     private int servicio_id;
     private short muni_id;
 
+    public ServiciosMunicipios() {
+    }
+
+    public ServiciosMunicipios(int servicio_muni_id, int servicio_id, short muni_id) {
+        this.servicio_muni_id = servicio_muni_id;
+        this.servicio_id = servicio_id;
+        this.muni_id = muni_id;
+    }
+    
     public int getServicio_muni_id() {
         return servicio_muni_id;
     }

@@ -3,6 +3,14 @@ public class TiposCosto {
     private byte tipocosto_id;
     private String descripcion;
 
+    public TiposCosto(byte tipocosto_id, String descripcion) {
+        this.tipocosto_id = tipocosto_id;
+        this.descripcion = descripcion;
+    }
+
+    public TiposCosto() {
+    }
+    
     public byte getTipocosto_id() {
         return tipocosto_id;
     }

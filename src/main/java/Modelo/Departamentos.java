@@ -4,6 +4,15 @@ public class Departamentos {
     private String nombre;
     private byte region_id;
 
+    public Departamentos() {
+    }
+
+    public Departamentos(byte depa_id, String nombre, byte region_id) {
+        this.depa_id = depa_id;
+        this.nombre = nombre;
+        this.region_id = region_id;
+    }
+    
     public byte getDepa_id() {
         return depa_id;
     }

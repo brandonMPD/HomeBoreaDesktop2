@@ -66,7 +66,7 @@ public class AsociadosControlador implements ActionListener, MouseListener{
     
     public void buscarAsociados(){
         int codigo = Integer.parseInt(this.vista.jTxtAsociadosId.getText());
-        modelo = dao.buscarAsociados(codigo);
+        modelo = dao.buscarAsociados(modelo);
         this.vista.jTxtAntecedentesPena.setEnabled(false);
         this.vista.jTxtAntecedentesPoli.setEnabled(false);
         this.vista.jTxtDpiImg.setEnabled(false);

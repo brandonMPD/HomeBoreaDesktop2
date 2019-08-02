@@ -4,6 +4,14 @@ public class Clientes {
     private String usuario;
     private String contrasenia;
 
+    public Clientes() {
+    }
+
+    public Clientes(int cliente_id, String usuario, String contrasenia) {
+        this.cliente_id = cliente_id;
+        this.usuario = usuario;
+        this.contrasenia = contrasenia;
+    }
     public int getCliente_id() {
         return cliente_id;
     }
